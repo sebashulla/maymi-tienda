@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="maymi: tienda de belleza coreana. Explora productos, compara fórmulas y crea una rutina de skincare. Envíos a todo el Perú.">
+  <meta name="theme-color" content="#F5EFC6">
+  <title>maymi — K-Beauty Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline">
+    <span>ENVÍOS A TODO EL PERÚ</span><i></i><span>YAPE · TRANSFERENCIA · PAGO CONTRA ENTREGA</span><i></i><a href="https://instagram.com/maymi.pe" target="_blank" rel="noopener">IG @MAYMI.PE</a><i></i><a href="https://www.tiktok.com/@maymi.pe" target="_blank" rel="noopener">TIKTOK @MAYMI.PE</a>
+  </div>
+  <header class="header" id="top">
+    <a class="wordmark" href="#inicio" aria-label="maymi inicio"><img referrerpolicy="no-referrer" src="assets/maymi-logo.png" alt="maymi" class="brand-logo"><small>K-BEAUTY STORE</small></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Abrir navegación">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#tienda">Tienda</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#rutina">Rutinas</a>
+      <a href="#skin-finder">Skin Finder</a>
+      <a href="#maymi-box">Maymi Box</a>
+      <a href="#promociones">Promociones</a>
+    </nav>
+    <div class="header-tools">
+      <label class="searchbox"><span>⌕</span><input id="globalSearch" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"></label>
+      <button class="header-link" id="accountOpen">Cuenta</button>
+      <button class="header-link" id="savedOpen">Guardados <b id="savedCount">0</b></button>
+      <button class="bag-button" id="bagOpen">Bolsa <b id="bagCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <span class="kicker">K-BEAUTY · CURATED FOR YOU</span>
+        <h1>Cuidado coreano<br>para una piel <em>real.</em></h1>
+        <p>Fórmulas coreanas, ingredientes que puedes conocer y productos elegidos para acompañar tu rutina diaria.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#tienda">Explorar tienda <span>↗</span></a><a class="button button-line" href="#skin-finder">Encuentra tu rutina <span>→</span></a></div>
+        <div class="hero-footnote">Una selección de K-beauty para cuidar tu piel a tu ritmo.</div>
+      </div>
+      <div class="hero-side-note"><span>01</span><p>Limpiar<br>Hidratar<br>Proteger</p></div>
+      <div class="hero-pagination"><b></b><i></i><i></i></div>
+    </section>
+
+    <section class="service-rail" aria-label="Información de compra">
+      <div><span class="rail-symbol">01</span><p><b>Envíos nacionales</b><small>Entregas a todo el Perú</small></p></div>
+      <div><span class="rail-symbol">02</span><p><b>Medios de pago</b><small>Visa, Yape y transferencias bancarias</small></p></div>
+      <div><span class="rail-symbol">03</span><p><b>Selección K-beauty</b><small>Marcas y productos coreanos</small></p></div>
+      <div><span class="rail-symbol">04</span><p><b>Atención directa</b><small>Consultas por WhatsApp</small></p></div>
+    </section>
+
+    <section class="brand-strip section-wrap" id="marcas">
+      <div class="strip-label">MARCAS<br>SELECCIONADAS</div>
+      <button data-brand="COSRX">COSRX</button>
+      <button data-brand="Beauty of Joseon">BEAUTY OF JOSEON</button>
+      <button data-brand="Anua">anua</button>
+      <button data-brand="Round Lab">ROUND LAB</button>
+      <button data-brand="SKIN1004">SKIN1004</button>
+      <button data-brand="Torriden">TORRIDEN</button>
+    </section>
+
+    <section class="category-section section-wrap" id="categorias">
+      <div class="section-heading category-heading reveal"><div><span class="kicker">SHOP BY CATEGORY</span><h2>Encuentra lo que<br>tu rutina <em>necesita.</em></h2></div><p>Explora por tipo de producto y descubre opciones para cada paso de tu cuidado diario.</p></div>
+      <div class="category-grid">
+        <button class="category-card cat-clean" data-category="Limpieza"><img referrerpolicy="no-referrer" src="https://images-na.ssl-images-amazon.com/images/I/61Lq1IiI8cL.jpg" alt="Limpiador COSRX" loading="lazy"><span>01 / LIMPIEZA</span><b>Limpiadores</b><small>Geles y aceites</small></button>
+        <button class="category-card cat-toner" data-category="Tónicos"><img referrerpolicy="no-referrer" src="https://koreanskincare.com/cdn/shop/files/Product-page-sizes_a6f733ca-d0cb-4dd2-9876-6705b69886e5.jpg?v=1771921350" alt="Tónico Round Lab" loading="lazy"><span>02 / PREPARAR</span><b>Tónicos y esencias</b><small>Texturas acuosas</small></button>
+        <button class="category-card cat-serum" data-category="Sérums"><img referrerpolicy="no-referrer" src="https://www.adorebeauty.co.nz/pim_media/000/530/611/Dive-In_Low_Molecular_Hyaluronic_Acid_Serum.png?fmt=webp&h=386&w=386" alt="Sérum Torriden" loading="lazy"><span>03 / TRATAMIENTO</span><b>Sérums y ampollas</b><small>Fórmulas concentradas</small></button>
+        <button class="category-card cat-cream" data-category="Hidratación"><img referrerpolicy="no-referrer" src="https://media.ultainc.com/i/ulta/2636338?%24ProductCardNeutralBGLight%24=&fmt=auto&h=400&w=400" alt="Crema Round Lab" loading="lazy"><span>04 / HIDRATAR</span><b>Cremas y geles</b><small>Hidratación diaria</small></button>
+        <button class="category-card cat-sun" data-category="Protección solar"><img referrerpolicy="no-referrer" src="https://dazzeal.gr/image/cache/catalog/uploaded_to_cms/BOJ-Relief-Sun-Rice-Probiotics-SPF50-PA-50ml_8809782555508_p1-1600x1600.jpg" alt="Protector solar Beauty of Joseon" loading="lazy"><span>05 / PROTEGER</span><b>Protección solar</b><small>SPF para el día</small></button>
+        <button class="category-card cat-mask" data-category="Mascarillas"><img referrerpolicy="no-referrer" src="https://cosibella-wholesale.com/eng_pl_SKIN1004-Madagascar-Centella-Watergel-Sheet-Ampoule-Mask-Hydrogel-Face-Mask-25ml-12708_3.webp" alt="Mascarilla SKIN1004" loading="lazy"><span>06 / CUIDADO EXTRA</span><b>Mascarillas</b><small>Un paso adicional</small></button>
+      </div>
+    </section>
+
+    <section class="featured-section" id="tienda">
+      <div class="section-wrap">
+        <div class="section-heading split-heading reveal"><div><span class="kicker">THE K-BEAUTY EDIT</span><h2>Productos para conocer.<br><em>Fórmulas para elegir.</em></h2></div><a class="text-arrow" href="#tienda">Ver catálogo completo ↗</a></div>
+        <div class="filter-row">
+          <div class="filter-chips" id="brandFilters"><button class="filter-chip active" data-brand="all">Todos</button><button class="filter-chip" data-brand="COSRX">COSRX</button><button class="filter-chip" data-brand="Beauty of Joseon">Beauty of Joseon</button><button class="filter-chip" data-brand="Anua">Anua</button><button class="filter-chip" data-brand="Round Lab">Round Lab</button><button class="filter-chip" data-brand="SKIN1004">SKIN1004</button><button class="filter-chip" data-brand="Torriden">Torriden</button></div>
+          <select id="sortProducts" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="low">Precio: menor a mayor</option><option value="high">Precio: mayor a menor</option><option value="az">Nombre A-Z</option></select>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="catalog-more"><button class="button button-line" id="showAllProducts">Mostrar todos los productos</button><span>Ofertas y precios en soles. Revisa disponibilidad al finalizar tu pedido.</span></div>
+      </div>
+    </section>
+
+    <section class="skin-finder-section" id="skin-finder">
+      <div class="skin-finder-photo"></div>
+      <div class="skin-finder-copy reveal"><span class="kicker">SKIN FINDER · PERSONALIZA TU BÚSQUEDA</span><h2>Tu rutina empieza<br>por <em>conocerte.</em></h2><p>Responde un cuestionario sobre tus preferencias, necesidades de cuidado y estilo de rutina. Recibirás una selección de productos para explorar.</p><ul><li>Tipo de piel y nivel de sensibilidad</li><li>Preferencias de textura e ingredientes</li><li>Presupuesto y cantidad de pasos</li></ul><button class="button button-dark" id="openSkinFinder">Comenzar cuestionario ↗</button><small>Herramienta informativa. No realiza diagnósticos dermatológicos.</small></div>
+    </section>
+
+    <section class="results-section section-wrap" id="resultados">
+      <div class="results-intro reveal"><span class="kicker">COMPARACIÓN VISUAL · ROSTRO</span><h2>Antes y <em>después.</em></h2><p>Desliza la línea para apreciar mejor la textura, la hidratación y la luminosidad del rostro en una comparación visual más limpia y cercana.</p><div class="results-caption">Desliza la línea y descubre cómo una rutina bien elegida puede transformar visualmente la sensación de frescura y luminosidad.</div></div>
+      <div class="comparison-slider" id="comparisonSlider" style="--split:50%">
+        <div class="comparison-image comparison-before"></div>
+        <div class="comparison-image comparison-after"></div>
+        <span class="comparison-tag tag-before">ANTES</span><span class="comparison-tag tag-after">DESPUÉS</span>
+        <div class="comparison-line" aria-hidden="true"><span>↔</span></div>
+        <input type="range" min="0" max="100" value="50" id="comparisonRange" aria-label="Mover línea de comparación">
+      </div>
+      <div class="results-product"><img referrerpolicy="no-referrer" src="https://skininseoul.com/cdn/shop/products/019000000009.png?v=1638042384" alt="COSRX Advanced Snail 96 Mucin Power Essence" loading="lazy"><div><span class="kicker">ESENCIA DESTACADA</span><h3>COSRX Advanced Snail 96</h3><div class="featured-price"><span class="old-price">S/ 110.00</span><span class="current-price">S/ 98.00</span></div><p>Esencia con filtrado de secreción de caracol y humectantes. Ayuda a aportar hidratación y suavidad; se utiliza después de la limpieza y del tónico, antes de la crema hidratante.</p><a href="https://www.cosrx.com/products/advanced-snail-96-mucin-power-essence" target="_blank" rel="noopener" class="text-arrow">Ver información del fabricante ↗</a></div></div>
+    </section>
+
+    <section class="compare-section section-wrap" id="comparar">
+      <div class="section-heading split-heading reveal"><div><span class="kicker">COMPARA ANTES DE ELEGIR</span><h2>¿Qué fórmula va<br>con <em>tu rutina?</em></h2></div><p>Revisa para qué sirve cada producto, su textura y los ingredientes destacados. No todos cumplen la misma función.</p></div>
+      <div class="compare-cards" id="compareCards"></div>
+      <div class="compare-table-wrap"><table class="compare-table" id="compareTable"><thead><tr><th>CARACTERÍSTICA</th><th>COSRX Snail 96</th><th>Anua Heartleaf 77</th><th>Torriden DIVE-IN</th></tr></thead><tbody><tr><th>Función principal</th><td>Hidratación y apoyo a la barrera</td><td>Tónico acuoso para preparar la piel</td><td>Hidratación con ácido hialurónico</td></tr><tr><th>Textura</th><td>Esencia viscosa y ligera</td><td>Acuosa</td><td>Sérum ligero</td></tr><tr><th>Ingrediente destacado</th><td>96% filtrado de secreción de caracol</td><td>77% extracto de heartleaf</td><td>Complejo de ácido hialurónico 5D</td></tr><tr><th>Paso de rutina</th><td>Después del tónico</td><td>Después de la limpieza</td><td>Después del tónico</td></tr></tbody></table></div>
+      <p class="table-note">Información resumida de las fichas de producto y fabricantes. Revisa siempre el INCI y las indicaciones del envase antes de usar.</p>
+    </section>
+
+    <section class="routine-section" id="rutina">
+      <div class="section-wrap routine-layout">
+        <div class="routine-copy reveal"><span class="kicker">BUILD YOUR ROUTINE</span><h2>Ordena tus pasos.<br><em>Hazla tuya.</em></h2><p>Organiza los productos que te interesan en una rutina de mañana o de noche. Puedes cambiar cada selección y revisar el total.</p><div class="routine-tabs"><button class="active" data-routine="AM">MAÑANA · AM</button><button data-routine="PM">NOCHE · PM</button></div><div class="routine-disclaimer">La rutina es una guía de organización. Sigue las instrucciones de cada producto y evita combinar activos sin revisar sus indicaciones.</div></div>
+        <div class="routine-builder"><div class="routine-steps" id="routineSteps"></div><aside class="routine-summary"><span class="kicker">TU SELECCIÓN</span><h3>Resumen de rutina</h3><div id="routineItems"><p class="empty-text">Aún no has seleccionado productos.</p></div><div class="routine-total"><span>Total referencial</span><b id="routineTotal">S/ 0.00</b></div><button class="button button-dark full" id="routineToBag">Añadir rutina a la bolsa</button><button class="button button-line full" id="saveRoutine">Guardar en este dispositivo</button></aside></div>
+      </div>
+    </section>
+
+    <section class="maymi-box-section" id="maymi-box">
+      <div class="box-image"></div>
+      <div class="box-copy reveal"><span class="kicker">MAYMI BOX · CREA TU SELECCIÓN</span><h2>Una caja hecha<br><em>a tu manera.</em></h2><p>Elige una categoría, explora los productos disponibles y arma una selección para ti o para regalar. Puedes añadir una dedicatoria y elegir el acabado del empaque.</p><div class="box-highlights"><div><b>01</b><span>Escoge el tamaño</span></div><div><b>02</b><span>Selecciona productos</span></div><div><b>03</b><span>Personaliza el detalle</span></div></div><button class="button button-dark" id="openBoxBuilder">Armar mi Maymi Box ↗</button></div>
+    </section>
+
+    <section class="ingredients-section section-wrap" id="ingredientes">
+      <div class="section-heading reveal"><span class="kicker">GET TO KNOW YOUR INGREDIENTS</span><h2>Entiende lo que <em>eliges.</em></h2><p>Una pequeña guía para reconocer ingredientes frecuentes en el cuidado coreano.</p></div>
+      <div class="ingredient-grid">
+        <article class="ingredient-card"><img referrerpolicy="no-referrer" src="https://skininseoul.com/cdn/shop/products/019000000009.png?v=1638042384" alt="Textura de esencia COSRX" loading="lazy"><span>01 / HUMECTACIÓN</span><h3>Filtrado de caracol</h3><p>Ingrediente presente en algunas esencias para ayudar a mantener la hidratación y acondicionar la piel.</p></article>
+        <article class="ingredient-card"><img referrerpolicy="no-referrer" src="https://www.adorebeauty.com.au/pim_media/000/545/887/SKIN1004_Madagascar_Centella_Ampoule_55ml001.png?fmt=webp&h=772&w=772" alt="Ampoule de centella SKIN1004" loading="lazy"><span>02 / CUIDADO SUAVE</span><h3>Centella asiática</h3><p>Ingrediente botánico utilizado en fórmulas orientadas al cuidado y confort de la piel.</p></article>
+        <article class="ingredient-card"><img referrerpolicy="no-referrer" src="https://www.adorebeauty.co.nz/pim_media/000/530/611/Dive-In_Low_Molecular_Hyaluronic_Acid_Serum.png?fmt=webp&h=386&w=386" alt="Sérum Torriden" loading="lazy"><span>03 / HIDRATACIÓN</span><h3>Ácido hialurónico</h3><p>Humectante que ayuda a atraer y retener agua en la superficie de la piel.</p></article>
+      </div>
+    </section>
+
+    <section class="promo-band" id="promociones"><div><span class="kicker">MAYMI FIRST ORDER</span><h2>Tu primera compra<br>tiene un <em>detalle.</em></h2><p>Usa el código de demostración MAYMI10 para ver cómo se aplica un descuento en la bolsa.</p></div><div class="promo-codes"><div class="promo-code"><span>PRIMERA COMPRA · 10%</span><b>MAYMI10</b><button id="copyPromo">Copiar código</button></div><div class="promo-code promo-code-secondary"><span>MES DE CUMPLEAÑOS · 15%</span><b>MAYMIBDAY</b><button id="copyBirthdayPromo">Copiar código</button></div></div></section>
+
+    <section class="contact-section section-wrap" id="contacto">
+      <div class="contact-copy reveal"><span class="kicker">NECESITAS AYUDA</span><h2>Estamos para<br><em>orientarte.</em></h2><p>Si tienes dudas sobre un producto, disponibilidad, envíos o cómo armar tu caja, puedes escribirnos directamente.</p><div class="contact-details"><a href="https://wa.me/51931333017" target="_blank" rel="noopener"><span>WHATSAPP</span><b>+51 931 333 017 ↗</b></a><a href="https://instagram.com/maymi.pe" target="_blank" rel="noopener"><span>INSTAGRAM</span><b>@maymi.pe ↗</b></a><a href="https://www.tiktok.com/@maymi.pe" target="_blank" rel="noopener"><span>TIKTOK</span><b>@maymi.pe ↗</b></a><a href="mailto:hola@maymi.pe"><span>CORREO</span><b>hola@maymi.pe ↗</b></a></div></div>
+      <form class="contact-form" id="contactForm"><span class="kicker">CONTACTO DIRECTO</span><h3>Cuéntanos qué necesitas.</h3><label>Nombre<input name="name" required placeholder="Tu nombre"></label><label>Motivo<select name="topic"><option>Consulta sobre un producto</option><option>Disponibilidad y precios</option><option>Armar una Maymi Box</option><option>Envíos y medios de pago</option><option>Otro</option></select></label><label>Mensaje<textarea name="message" required rows="4" placeholder="Escribe tu consulta..."></textarea></label><button class="button button-dark full" type="submit">Enviar consulta ↗</button></form>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-main section-wrap"><div class="footer-brand"><a class="wordmark wordmark-footer" href="#inicio"><img referrerpolicy="no-referrer" src="assets/maymi-logo.png" alt="maymi" class="brand-logo"><small>K-BEAUTY STORE</small></a><p>Selección de cuidado coreano.<br>Perú · Envíos nacionales.</p></div><div><b>TIENDA</b><a href="#tienda">Todos los productos</a><a href="#categorias">Categorías</a><a href="#marcas">Marcas</a></div><div><b>DESCUBRE</b><a href="#skin-finder">Skin Finder</a><a href="#rutina">Crear rutina</a><a href="#maymi-box">Maymi Box</a></div><div><b>ATENCIÓN</b><a href="#contacto">Contacto</a><a href="#promociones">Promociones</a><a href="https://instagram.com/maymi.pe" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@maymi.pe" target="_blank" rel="noopener">TikTok</a></div></div><div class="footer-bottom section-wrap"><span>© 2026 MAYMI · Marypaz Pumachara</span><span>Precios y disponibilidad sujetos a confirmación.</span></div></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop"><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-x" id="modalClose" aria-label="Cerrar">×</button><div id="modalContent"></div></section></div>
+  <aside class="bag-drawer" id="bagDrawer"><div class="drawer-head"><div><span class="kicker">MAYMI</span><h3>Tu bolsa <small id="drawerCount">(0)</small></h3></div><button id="bagClose" aria-label="Cerrar bolsa">×</button></div><div class="drawer-items" id="bagItems"></div><div class="drawer-footer"><div class="coupon-line"><input id="couponInput" placeholder="Código de descuento"><button id="applyCoupon">Aplicar</button></div><p id="couponFeedback"></p><div class="price-line"><span>Subtotal</span><b id="bagSubtotal">S/ 0.00</b></div><div class="price-line"><span>Descuento</span><b id="bagDiscount">S/ 0.00</b></div><div class="price-line total-line"><span>Total</span><b id="bagTotal">S/ 0.00</b></div><button class="button button-dark full" id="checkoutButton">Finalizar compra ↗</button><small>Medios de pago disponibles: Visa, Yape y transferencias bancarias.</small></div></aside>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
