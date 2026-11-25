@@ -30,6 +30,16 @@ Se mantuvo la esencia de la marca (manteca, vino y azul polvo; Baloo 2, DM Serif
 - Bolsa lateral con fondo difuminado; se cierra con Esc o tocando fuera.
 - Títulos en español (antes había varios en inglés).
 
+**Movimiento v2**
+- Scroll suave con [Lenis](https://github.com/darkroomengineering/lenis) y animaciones ligadas al scroll con [GSAP + ScrollTrigger](https://gsap.com) (incluidas en `assets/vendor`, sin CDN).
+- Intro con el logo y la portada que se abre desde una ventana.
+- Portada fija: al bajar, la foto crece a pantalla completa, el titular se separa, las gotas suben a distintas velocidades y aparece la frase "Una selección de K-beauty para cuidar tu piel a tu ritmo."
+- Títulos que entran palabra por palabra y paneles que crecen al aparecer.
+- Categorías: el fondo cambia de color en cada paso y las tarjetas entran girando.
+- Productos con inclinación 3D y brillo al pasar el mouse; cursor propio y botones magnéticos.
+- Maymi Box se abre como una ventana a pantalla completa; los ingredientes se apilan como tarjetas.
+- La cinta de marcas se inclina según la velocidad del scroll; el nombre del pie sube letra por letra.
+
 **Rendimiento y accesibilidad**
 - Tipografías alojadas en el propio repositorio (`assets/fonts`), sin depender de Google Fonts.
 - Imágenes de portada, caja y antes/después en WebP (la portada pasó de 1,8 MB a ~40 KB).

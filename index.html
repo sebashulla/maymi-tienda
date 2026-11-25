@@ -16,9 +16,11 @@
   <link rel="preload" href="assets/fonts/nunito-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/maymi-hero.webp" as="image">
   <link rel="stylesheet" href="styles.css">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>(function(d){var h=d.documentElement;h.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){h.classList.add('gsap');try{if(sessionStorage.getItem('maymiIntro'))h.classList.add('no-intro')}catch(e){}}})(document)</script>
 </head>
 <body>
+  <div class="intro" aria-hidden="true"><div class="intro-inner"><img src="assets/maymi-logo.png" alt="" width="222" height="187"><span class="intro-bar"><i></i></span></div></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><b></b></span></div>
   <a class="skip-link" href="#tienda">Ir a la tienda</a>
 
   <div class="topline" aria-label="Información de la tienda">
@@ -48,34 +50,37 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- HERO (pinned, scroll-scrubbed) -->
     <section class="hero" id="inicio">
       <div class="hero-frame">
-        <div class="hero-photo" data-parallax="0.22" aria-hidden="true"><img src="assets/maymi-hero.webp" alt="" width="1672" height="941" fetchpriority="high"></div>
+        <div class="hero-photo" aria-hidden="true"><img src="assets/maymi-hero.webp" alt="" width="1672" height="941" fetchpriority="high"></div>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="dew-layer" aria-hidden="true">
-          <span class="dew d1" data-depth="0.6"></span>
-          <span class="dew d2" data-depth="1.1"></span>
-          <span class="dew d3" data-depth="0.35"></span>
-          <span class="dew d4" data-depth="0.9"></span>
-          <span class="dew d5" data-depth="1.4"></span>
-          <span class="dew d6" data-depth="0.5"></span>
+          <span class="dew-wrap d1" data-depth="1.6"><span class="dew"></span></span>
+          <span class="dew-wrap d2" data-depth="2.4"><span class="dew"></span></span>
+          <span class="dew-wrap d3" data-depth="0.8"><span class="dew"></span></span>
+          <span class="dew-wrap d4" data-depth="3"><span class="dew"></span></span>
+          <span class="dew-wrap d5" data-depth="1.2"><span class="dew"></span></span>
+          <span class="dew-wrap d6" data-depth="2"><span class="dew"></span></span>
+          <span class="dew-wrap d7" data-depth="3.4"><span class="dew"></span></span>
         </div>
         <div class="hero-copy">
-          <span class="kicker hero-in" style="--i:0">K-beauty · elegido para ti</span>
+          <span class="kicker hero-in">K-beauty · elegido para ti</span>
           <h1>
-            <span class="line"><span class="hero-in" style="--i:1">Cuidado coreano</span></span>
-            <span class="line"><span class="hero-in" style="--i:2">para una piel</span></span>
-            <span class="line"><em class="hero-in" style="--i:3">real.</em></span>
+            <span class="line l1"><span class="hero-in">Cuidado coreano</span></span>
+            <span class="line l2"><span class="hero-in">para una piel</span></span>
+            <span class="line l3"><em class="hero-in">real.</em></span>
           </h1>
-          <p class="hero-in" style="--i:4">Fórmulas coreanas, ingredientes que puedes conocer y productos elegidos para acompañar tu rutina diaria.</p>
-          <div class="hero-actions hero-in" style="--i:5"><a class="button button-dark" href="#tienda">Explorar tienda <span aria-hidden="true">↗</span></a><a class="button button-glass" href="#skin-finder">Encuentra tu rutina</a></div>
+          <p class="hero-in hero-lead">Fórmulas coreanas, ingredientes que puedes conocer y productos elegidos para acompañar tu rutina diaria.</p>
+          <div class="hero-actions hero-in"><a class="button button-dark" href="#tienda" data-magnetic>Explorar tienda <span aria-hidden="true">↗</span></a><a class="button button-glass" href="#skin-finder" data-magnetic>Encuentra tu rutina</a></div>
         </div>
-        <div class="hero-side-note hero-in" style="--i:6" data-depth="0.25">
+        <div class="hero-side-note hero-in">
           <span>Tu rutina en tres gestos</span>
           <ol><li>Limpiar</li><li>Hidratar</li><li>Proteger</li></ol>
         </div>
-        <a class="scroll-cue" href="#beneficios" aria-label="Bajar"><span></span></a>
+        <div class="hero-veil" aria-hidden="true"></div>
+        <p class="hero-statement" aria-label="Una selección de K-beauty para cuidar tu piel a tu ritmo.">Una selección de K-beauty para cuidar tu piel a tu ritmo.</p>
+        <div class="scroll-cue" aria-hidden="true"><span></span><small>Desliza</small></div>
       </div>
     </section>
 
@@ -120,12 +125,12 @@
         </div>
         <div class="category-viewport">
           <div class="category-grid" id="categoryTrack">
-            <button class="category-card tone-cream" data-category="Limpieza"><span class="step-num">01</span><span class="step-label">01 / Limpieza</span><b>Limpiadores</b><small>Geles y aceites</small><span class="cat-photo"><img src="https://images-na.ssl-images-amazon.com/images/I/61Lq1IiI8cL.jpg" alt="Limpiador COSRX" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
-            <button class="category-card tone-blue" data-category="Tónicos"><span class="step-num">02</span><span class="step-label">02 / Preparar</span><b>Tónicos y esencias</b><small>Texturas acuosas</small><span class="cat-photo"><img src="https://koreanskincare.com/cdn/shop/files/Product-page-sizes_a6f733ca-d0cb-4dd2-9876-6705b69886e5.jpg?v=1771921350" alt="Tónico Round Lab" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
-            <button class="category-card tone-blush" data-category="Sérums"><span class="step-num">03</span><span class="step-label">03 / Tratamiento</span><b>Sérums y ampollas</b><small>Fórmulas concentradas</small><span class="cat-photo"><img src="https://www.adorebeauty.co.nz/pim_media/000/530/611/Dive-In_Low_Molecular_Hyaluronic_Acid_Serum.png?fmt=webp&amp;h=386&amp;w=386" alt="Sérum Torriden" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
-            <button class="category-card tone-cream" data-category="Hidratación"><span class="step-num">04</span><span class="step-label">04 / Hidratar</span><b>Cremas y geles</b><small>Hidratación diaria</small><span class="cat-photo"><img src="https://media.ultainc.com/i/ulta/2636338?%24ProductCardNeutralBGLight%24=&amp;fmt=auto&amp;h=400&amp;w=400" alt="Crema Round Lab" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
-            <button class="category-card tone-blue" data-category="Protección solar"><span class="step-num">05</span><span class="step-label">05 / Proteger</span><b>Protección solar</b><small>SPF para el día</small><span class="cat-photo"><img src="https://dazzeal.gr/image/cache/catalog/uploaded_to_cms/BOJ-Relief-Sun-Rice-Probiotics-SPF50-PA-50ml_8809782555508_p1-1600x1600.jpg" alt="Protector solar Beauty of Joseon" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
-            <button class="category-card tone-wine" data-category="Mascarillas"><span class="step-num">06</span><span class="step-label">06 / Cuidado extra</span><b>Mascarillas</b><small>Un paso adicional</small><span class="cat-photo"><img src="https://cosibella-wholesale.com/eng_pl_SKIN1004-Madagascar-Centella-Watergel-Sheet-Ampoule-Mask-Hydrogel-Face-Mask-25ml-12708_3.webp" alt="Mascarilla SKIN1004" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
+            <button data-cursor="Explorar" class="category-card tone-cream" data-category="Limpieza"><span class="step-num">01</span><span class="step-label">01 / Limpieza</span><b>Limpiadores</b><small>Geles y aceites</small><span class="cat-photo"><img src="https://images-na.ssl-images-amazon.com/images/I/61Lq1IiI8cL.jpg" alt="Limpiador COSRX" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
+            <button data-cursor="Explorar" class="category-card tone-blue" data-category="Tónicos"><span class="step-num">02</span><span class="step-label">02 / Preparar</span><b>Tónicos y esencias</b><small>Texturas acuosas</small><span class="cat-photo"><img src="https://koreanskincare.com/cdn/shop/files/Product-page-sizes_a6f733ca-d0cb-4dd2-9876-6705b69886e5.jpg?v=1771921350" alt="Tónico Round Lab" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
+            <button data-cursor="Explorar" class="category-card tone-blush" data-category="Sérums"><span class="step-num">03</span><span class="step-label">03 / Tratamiento</span><b>Sérums y ampollas</b><small>Fórmulas concentradas</small><span class="cat-photo"><img src="https://www.adorebeauty.co.nz/pim_media/000/530/611/Dive-In_Low_Molecular_Hyaluronic_Acid_Serum.png?fmt=webp&amp;h=386&amp;w=386" alt="Sérum Torriden" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
+            <button data-cursor="Explorar" class="category-card tone-cream" data-category="Hidratación"><span class="step-num">04</span><span class="step-label">04 / Hidratar</span><b>Cremas y geles</b><small>Hidratación diaria</small><span class="cat-photo"><img src="https://media.ultainc.com/i/ulta/2636338?%24ProductCardNeutralBGLight%24=&amp;fmt=auto&amp;h=400&amp;w=400" alt="Crema Round Lab" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
+            <button data-cursor="Explorar" class="category-card tone-blue" data-category="Protección solar"><span class="step-num">05</span><span class="step-label">05 / Proteger</span><b>Protección solar</b><small>SPF para el día</small><span class="cat-photo"><img src="https://dazzeal.gr/image/cache/catalog/uploaded_to_cms/BOJ-Relief-Sun-Rice-Probiotics-SPF50-PA-50ml_8809782555508_p1-1600x1600.jpg" alt="Protector solar Beauty of Joseon" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
+            <button data-cursor="Explorar" class="category-card tone-wine" data-category="Mascarillas"><span class="step-num">06</span><span class="step-label">06 / Cuidado extra</span><b>Mascarillas</b><small>Un paso adicional</small><span class="cat-photo"><img src="https://cosibella-wholesale.com/eng_pl_SKIN1004-Madagascar-Centella-Watergel-Sheet-Ampoule-Mask-Hydrogel-Face-Mask-25ml-12708_3.webp" alt="Mascarilla SKIN1004" loading="lazy" referrerpolicy="no-referrer"></span><span class="step-cta">Ver productos</span></button>
           </div>
         </div>
       </div>
@@ -133,8 +138,8 @@
 
     <!-- PRODUCTS -->
     <section class="featured-section" id="tienda">
-      <span class="dew dew-float f1" data-depth="0.5" aria-hidden="true"></span>
-      <span class="dew dew-float f2" data-depth="1" aria-hidden="true"></span>
+      <span class="dew-wrap dew-float f1" data-depth="1.1" aria-hidden="true"><span class="dew"></span></span>
+      <span class="dew-wrap dew-float f2" data-depth="2.2" aria-hidden="true"><span class="dew"></span></span>
       <div class="section-wrap">
         <div class="section-heading split-heading reveal"><div><span class="kicker">La selección K-beauty</span><h2>Productos para conocer.<br><em>Fórmulas para elegir.</em></h2></div><p>Ofertas y precios en soles. Revisa disponibilidad al finalizar tu pedido.</p></div>
         <div class="filter-row">
@@ -149,15 +154,15 @@
     <!-- SKIN FINDER -->
     <section class="skin-finder-section" id="skin-finder">
       <div class="section-wrap skin-finder-layout">
-        <div class="skin-finder-photo" aria-hidden="true"><div class="arch"><img src="assets/maymi-hero.webp" alt="" loading="lazy" data-parallax="0.12"></div><span class="dew dew-float f3" data-depth="0.8"></span></div>
-        <div class="skin-finder-copy reveal"><span class="kicker">Skin Finder · personaliza tu búsqueda</span><h2>Tu rutina empieza<br>por <em>conocerte.</em></h2><p>Responde un cuestionario sobre tus preferencias, necesidades de cuidado y estilo de rutina. Recibirás una selección de productos para explorar.</p><ul><li><b>Tipo de piel</b> y nivel de sensibilidad</li><li><b>Preferencias</b> de textura e ingredientes</li><li><b>Presupuesto</b> y cantidad de pasos</li></ul><button class="button button-dark" id="openSkinFinder">Comenzar cuestionario <span aria-hidden="true">↗</span></button><small>Herramienta informativa. No realiza diagnósticos dermatológicos.</small></div>
+        <div class="skin-finder-photo" aria-hidden="true"><div class="arch"><img src="assets/maymi-hero.webp" alt="" loading="lazy"></div><span class="dew-wrap dew-float f3" data-depth="1.8" aria-hidden="true"><span class="dew"></span></span></div>
+        <div class="skin-finder-copy reveal"><span class="kicker">Skin Finder · personaliza tu búsqueda</span><h2>Tu rutina empieza<br>por <em>conocerte.</em></h2><p>Responde un cuestionario sobre tus preferencias, necesidades de cuidado y estilo de rutina. Recibirás una selección de productos para explorar.</p><ul><li><b>Tipo de piel</b> y nivel de sensibilidad</li><li><b>Preferencias</b> de textura e ingredientes</li><li><b>Presupuesto</b> y cantidad de pasos</li></ul><button class="button button-dark" id="openSkinFinder" data-magnetic>Comenzar cuestionario <span aria-hidden="true">↗</span></button><small>Herramienta informativa. No realiza diagnósticos dermatológicos.</small></div>
       </div>
     </section>
 
     <!-- BEFORE / AFTER -->
     <section class="results-section section-wrap" id="resultados">
       <div class="results-intro reveal"><span class="kicker">Comparación visual · rostro</span><h2>Antes y <em>después.</em></h2><p>Desliza la línea para apreciar mejor la textura, la hidratación y la luminosidad del rostro en una comparación visual más limpia y cercana.</p><div class="results-caption">Desliza la línea y descubre cómo una rutina bien elegida puede transformar visualmente la sensación de frescura y luminosidad.</div></div>
-      <div class="comparison-slider" id="comparisonSlider" style="--split:50%" data-reveal>
+      <div data-cursor="Desliza" class="comparison-slider" id="comparisonSlider" style="--split:50%" data-reveal>
         <div class="comparison-image comparison-before"></div>
         <div class="comparison-image comparison-after"></div>
         <span class="comparison-tag tag-before">Antes</span><span class="comparison-tag tag-after">Después</span>
@@ -187,9 +192,9 @@
 
     <!-- MAYMI BOX -->
     <section class="maymi-box-section" id="maymi-box">
-      <div class="box-image" aria-hidden="true"><img src="assets/maymi-box.webp" alt="" loading="lazy" data-parallax="0.18"></div>
+      <div class="box-image" aria-hidden="true"><img src="assets/maymi-box.webp" alt="" loading="lazy"></div>
       <div class="section-wrap box-layout">
-        <div class="box-copy reveal"><span class="kicker">Maymi Box · crea tu selección</span><h2>Una caja hecha<br><em>a tu manera.</em></h2><p>Elige una categoría, explora los productos disponibles y arma una selección para ti o para regalar. Puedes añadir una dedicatoria y elegir el acabado del empaque.</p><ol class="box-highlights"><li><b>01</b><span>Escoge el tamaño</span></li><li><b>02</b><span>Selecciona productos</span></li><li><b>03</b><span>Personaliza el detalle</span></li></ol><button class="button button-dark" id="openBoxBuilder">Armar mi Maymi Box <span aria-hidden="true">↗</span></button></div>
+        <div class="box-copy reveal"><span class="kicker">Maymi Box · crea tu selección</span><h2>Una caja hecha<br><em>a tu manera.</em></h2><p>Elige una categoría, explora los productos disponibles y arma una selección para ti o para regalar. Puedes añadir una dedicatoria y elegir el acabado del empaque.</p><ol class="box-highlights"><li><b>01</b><span>Escoge el tamaño</span></li><li><b>02</b><span>Selecciona productos</span></li><li><b>03</b><span>Personaliza el detalle</span></li></ol><button class="button button-dark" id="openBoxBuilder" data-magnetic>Armar mi Maymi Box <span aria-hidden="true">↗</span></button></div>
       </div>
     </section>
 
@@ -205,8 +210,8 @@
 
     <!-- PROMO -->
     <section class="promo-band" id="promociones">
-      <span class="dew dew-float f4" data-depth="0.7" aria-hidden="true"></span>
-      <span class="dew dew-float f5" data-depth="1.2" aria-hidden="true"></span>
+      <span class="dew-wrap dew-float f4" data-depth="1.5" aria-hidden="true"><span class="dew"></span></span>
+      <span class="dew-wrap dew-float f5" data-depth="2.6" aria-hidden="true"><span class="dew"></span></span>
       <div class="promo-copy reveal"><span class="kicker">Tu primera compra</span><h2>Tu primera compra<br>tiene un <em>detalle.</em></h2><p>Usa el código de demostración MAYMI10 para ver cómo se aplica un descuento en la bolsa.</p></div>
       <div class="promo-codes"><div class="promo-code" data-reveal><span>Primera compra · 10%</span><b>MAYMI10</b><button id="copyPromo">Copiar código</button></div><div class="promo-code promo-code-secondary" data-reveal><span>Mes de cumpleaños · 15%</span><b>MAYMIBDAY</b><button id="copyBirthdayPromo">Copiar código</button></div></div>
     </section>
@@ -225,15 +230,18 @@
       <div><b>Descubre</b><a href="#skin-finder">Skin Finder</a><a href="#rutina">Crear rutina</a><a href="#maymi-box">Maymi Box</a></div>
       <div><b>Atención</b><a href="#contacto">Contacto</a><a href="#promociones">Promociones</a><a href="https://instagram.com/maymi.pe" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@maymi.pe" target="_blank" rel="noopener">TikTok</a></div>
     </div>
-    <div class="footer-giant" aria-hidden="true"><span data-parallax="-0.12">maymi</span></div>
+    <div class="footer-giant" aria-hidden="true"><span class="giant-word">maymi</span></div>
     <div class="footer-bottom section-wrap"><span>© 2026 MAYMI · Marypaz Pumachara</span><span>Precios y disponibilidad sujetos a confirmación.</span></div>
   </footer>
 
-  <div class="modal-backdrop" id="modalBackdrop"><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-x" id="modalClose" aria-label="Cerrar">×</button><div id="modalContent"></div></section></div>
+  <div class="modal-backdrop" id="modalBackdrop"><section class="modal-panel" data-lenis-prevent role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-x" id="modalClose" aria-label="Cerrar">×</button><div id="modalContent"></div></section></div>
   <div class="drawer-scrim" id="drawerScrim" aria-hidden="true"></div>
-  <aside class="bag-drawer" id="bagDrawer" aria-label="Tu bolsa"><div class="drawer-head"><div><span class="kicker">maymi</span><h3>Tu bolsa <small id="drawerCount">(0)</small></h3></div><button id="bagClose" aria-label="Cerrar bolsa">×</button></div><div class="drawer-items" id="bagItems"></div><div class="drawer-footer"><div class="coupon-line"><input id="couponInput" placeholder="Código de descuento"><button id="applyCoupon">Aplicar</button></div><p id="couponFeedback"></p><div class="price-line"><span>Subtotal</span><b id="bagSubtotal">S/ 0.00</b></div><div class="price-line"><span>Descuento</span><b id="bagDiscount">S/ 0.00</b></div><div class="price-line total-line"><span>Total</span><b id="bagTotal">S/ 0.00</b></div><button class="button button-dark full" id="checkoutButton">Finalizar compra ↗</button><small>Medios de pago disponibles: Visa, Yape y transferencias bancarias.</small></div></aside>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Tu bolsa"><div class="drawer-head"><div><span class="kicker">maymi</span><h3>Tu bolsa <small id="drawerCount">(0)</small></h3></div><button id="bagClose" aria-label="Cerrar bolsa">×</button></div><div class="drawer-items" id="bagItems" data-lenis-prevent></div><div class="drawer-footer"><div class="coupon-line"><input id="couponInput" placeholder="Código de descuento"><button id="applyCoupon">Aplicar</button></div><p id="couponFeedback"></p><div class="price-line"><span>Subtotal</span><b id="bagSubtotal">S/ 0.00</b></div><div class="price-line"><span>Descuento</span><b id="bagDiscount">S/ 0.00</b></div><div class="price-line total-line"><span>Total</span><b id="bagTotal">S/ 0.00</b></div><button class="button button-dark full" id="checkoutButton">Finalizar compra ↗</button><small>Medios de pago disponibles: Visa, Yape y transferencias bancarias.</small></div></aside>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
   <script src="motion.js"></script>
 </body>
 </html>
