@@ -13,7 +13,7 @@ python3 -m http.server 8000
 
 ## Publicarla con GitHub Pages
 
-En el repositorio: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**. En un par de minutos queda en `https://<usuario>.github.io/maymi-tienda/`.
+En el repositorio: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**. En un par de minutos queda en `https://sebashulla.github.io/maimi-tienda/`.
 
 ## Rediseño (noviembre 2026)
 
